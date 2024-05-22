@@ -16,6 +16,24 @@ public class Personas {
     private LocalDate fechaNacimiento;
     private String dni;
 
+    public Personas( Long id,String nombre,String apellido) {
+        this.apellido = apellido;
+        this.id = id;
+        this.nombre = nombre;
+    }
+
+    public Personas() {
+
+    }
+
+    public Personas(Long id, String nombre, String apellido, String dni, LocalDate fechaNacimiento) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
     public Long getId() {
         return id;
     }

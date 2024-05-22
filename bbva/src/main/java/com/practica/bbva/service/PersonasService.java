@@ -2,6 +2,7 @@ package com.practica.bbva.service;
 
 import com.practica.bbva.model.Personas;
 import com.practica.bbva.repository.PersonasRepository;
+import com.practica.bbva.util.ValidationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,10 +19,6 @@ public class PersonasService {
         return personasRepository.findAll();
     }
 
-    public Optional<Personas> findById(Long id) {
-        return personasRepository.findById(id);
-    }
-
     public Personas save(Personas personas) {
         return personasRepository.save(personas);
     }
@@ -30,9 +27,15 @@ public class PersonasService {
         personasRepository.deleteById(id);
     }
 
+    public Optional<Personas> findById(Long id) {
+        return personasRepository.findById(id);
+    }
+
     public Optional<Personas> findByDni(String dni) {
         return personasRepository.findByDni(dni);
     }
 }
+
+
 
 
